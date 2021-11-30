@@ -9,3 +9,15 @@ text.addEventListener('input',function(){
         textError.textContent="Name is Incorrect";
     }
 });
+//UC 2 Email validation.
+const email = document.querySelector('#emailInput');
+const emailError = document.querySelector('.email-error');
+email.addEventListener('input',function(){
+    //debugger;
+    let emailRegex = RegExp('^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$');
+    if(emailRegex.test(email.value)){
+        emailError.textContent="";
+    }else{
+        emailError.textContent="Email is InValid";
+    }
+});
