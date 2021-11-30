@@ -10,7 +10,7 @@ text.addEventListener('input',function(){
     }
 });
 //UC 2 Email validation.
-const email = document.querySelector('#emailInput');
+const email = document.querySelector('#email');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input',function(){
     //debugger;
@@ -19,5 +19,16 @@ email.addEventListener('input',function(){
         emailError.textContent="";
     }else{
         emailError.textContent="Email is InValid";
+    }
+});
+//UC3:Phone Validation.
+const phone = document.querySelector('#tel');
+const PhoneError = document.querySelector('.phone-error');
+phone.addEventListener('input',function(){
+    let phoneRegex = RegExp('^[1-9]{2}\\s[0-9]{10}$');
+    if(phoneRegex.test(phone.value)){
+        PhoneError.textContent="";
+    }else{
+        PhoneError.textContent="Phone number is incorrect";
     }
 });
