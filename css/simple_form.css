@@ -15,11 +15,14 @@ body{
     align-content: center;
     background:blue;
     font-weight: bold;
-    margin-bottom:20px;
+    margin-bottom:40px;
 }
 
 form{
     margin-top:50px;
+    border: 1px solid blue;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 div{
@@ -48,6 +51,7 @@ input{
 button{
     width:50%;
     margin:0 auto;
+    background:orange;
 }
 
 error-output{
